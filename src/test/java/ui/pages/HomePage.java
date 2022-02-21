@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ui.utilities.Driver;
+import java.util.List;
+import java.util.Random;
 
 public class HomePage {
 
@@ -32,5 +34,17 @@ public class HomePage {
     @FindBy(className = "a-list-item")
     public WebElement yourPasswordIsIncorrect;
 
+    @FindBy(id = "nav-hamburger-menu")
+    public WebElement allMenu;
 
+    @FindBy (className = "hmenu-item")
+    public List<WebElement> headersInAll;
+
+    @FindBy (xpath = "(//a[@class='hmenu-item hmenu-compressed-btn'])[1]")
+    public WebElement seeAll;
+
+    @FindBy (xpath = "//ul[@data-menu-id='1']")
+    public WebElement parentAllMenu;
 }
+
+

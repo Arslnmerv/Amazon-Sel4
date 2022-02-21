@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 public class LoginSteps {
 
     HomePage homePage = new HomePage();
+
     @When("User goes to url.")
     public void userGoesToUrl() {
 
@@ -34,8 +35,8 @@ public class LoginSteps {
     @Then("Enters the valid data in the password box and click the sign in button.")
     public void entersTheValidDataInThePasswordBoxAndClickTheSignInButton() {
 
-     homePage.passwordBox.sendKeys(ConfigReader.getProperty("validPassword"));
-     homePage.signInButton.click();
+        homePage.passwordBox.sendKeys(ConfigReader.getProperty("validPassword"));
+        homePage.signInButton.click();
 
     }
 
@@ -64,10 +65,8 @@ public class LoginSteps {
     @Then("Enters the invalid data in the password box and clicks the sign in button.")
     public void entersTheInvalidDataInThePasswordBoxAndClicksTheSignInButton() {
 
-
         homePage.passwordBox.sendKeys(ConfigReader.getProperty("invalidPassword"));
         homePage.signInButton.click();
-
 
     }
 
@@ -78,13 +77,12 @@ public class LoginSteps {
 
     }
 
-
-    @Then("closes the page")
+    @Then("Closes the page")
     public void closesThePage() {
 
         Driver.closeDriver();
-    }
 
+    }
 
 
 }
