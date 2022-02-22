@@ -45,6 +45,12 @@ public class HomePage {
 
     @FindBy (xpath = "//ul[@data-menu-id='1']")
     public WebElement parentAllMenu;
+
+    @FindBy (id = "twotabsearchtextbox")
+    public WebElement searchBox;
+
+    @FindBy (className = "sg-col-inner")
+    public List<WebElement> list;
 }
 
 
