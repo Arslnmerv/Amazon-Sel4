@@ -38,7 +38,7 @@ public class HomePage {
     public WebElement allMenu;
 
     @FindBy (className = "hmenu-item")
-    public List<WebElement> headersInAll;
+    public List <WebElement> headersInAll;
 
     @FindBy (xpath = "(//a[@class='hmenu-item hmenu-compressed-btn'])[1]")
     public WebElement seeAll;
@@ -51,6 +51,26 @@ public class HomePage {
 
     @FindBy (xpath = "//span[@class='a-size-base-plus a-color-base a-text-normal']")
     public List<WebElement> resultsList;
+
+    //Filter & List
+
+    @FindBy (id = "s-result-sort-select")
+    public WebElement sortBy;
+
+    @FindBy (xpath = "//*[contains(@id, 'browse-bin-title')]")
+    public List <WebElement> filtersHeader;
+
+    @FindBy (className = "a-dropdown-item")
+    public List <WebElement> sortbyDropdown;
+
+    @FindBy (xpath = "//i[@class='a-icon a-icon-checkbox']")
+    public List <WebElement> filtersInner;
+
+    @FindBy (className = "a-dropdown-prompt")
+    public WebElement sortByIcon;
+
+    @FindBy (xpath = "//i[@class='a-size-medium a-color-base a-text-normal']")
+    public List <WebElement> resultsAfterFilter;
 }
 
 
