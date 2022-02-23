@@ -49,8 +49,8 @@ public class HomePage {
     @FindBy (id = "twotabsearchtextbox")
     public WebElement searchBox;
 
-    @FindBy (className = "sg-col-inner")
-    public List<WebElement> list;
+    @FindBy (xpath = "//span[@class='a-size-base-plus a-color-base a-text-normal']")
+    public List<WebElement> resultsList;
 }
 
 
