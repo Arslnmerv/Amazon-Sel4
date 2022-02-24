@@ -5,4 +5,4 @@ Feature: US_07 The user must make sure that any of the links at the bottom of th
     Then  Logs in with valid data
     Then Sees the links at the bottom of the homepage.
     Then Verifies that the links are active and point to the relevant page.
-#    And Closes the page
+    And Closes the page

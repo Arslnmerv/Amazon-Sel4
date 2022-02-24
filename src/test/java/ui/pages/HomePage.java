@@ -92,6 +92,38 @@ public class HomePage {
 
     @FindBy (xpath = "//ul/li/a")
     public List <WebElement> headersInFooter;
+
+    //Shopping List
+
+    @FindBy (xpath ="//span[text()='Create a List']")
+    public WebElement createAList;
+
+    @FindBy (xpath ="(//input[@class='a-button-input a-declarative'])[3]")
+    public WebElement createAListButton;
+
+    @FindBy (id = "profile-list-name")
+    public WebElement shoppingListHeader;
+
+    @FindBy (id = "overflow-menu-popover-trigger")
+    public WebElement more;
+
+    @FindBy (id = "editYourList")
+    public WebElement manageList;
+
+    @FindBy (xpath ="(//input[@class='a-button-input'])[7]")
+    public WebElement deleteList;
+
+    @FindBy (id = "a-popover-content-3")
+    public WebElement confirmDelete;
+
+    @FindBy (name = "submit.save")
+    public WebElement yesButton;
+
+//    @FindBy (xpath ="//span[text()='Create a List']")
+//    public WebElement createAList;
+
+
+
 }
 
 
