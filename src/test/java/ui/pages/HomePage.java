@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import ui.utilities.Driver;
 import java.util.List;
-import java.util.Random;
 
 public class HomePage {
 
@@ -88,6 +87,11 @@ public class HomePage {
 
     @FindBy(xpath = "(//span[@class='a-size-medium a-color-base sc-price sc-white-space-nowrap'])[2]")
     public WebElement subTotalText;
+
+    //Links In Footer
+
+    @FindBy (xpath = "//ul/li/a")
+    public List <WebElement> headersInFooter;
 }
 
 
