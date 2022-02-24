@@ -49,7 +49,7 @@ public class HomePage {
     @FindBy (id = "twotabsearchtextbox")
     public WebElement searchBox;
 
-    @FindBy (xpath = "//span[@class='a-size-base-plus a-color-base a-text-normal']")
+    @FindBy (xpath = "//span[@class='a-size-medium a-color-base a-text-normal']")
     public List<WebElement> resultsList;
 
     //Filter & List
@@ -71,6 +71,23 @@ public class HomePage {
 
     @FindBy (xpath = "//i[@class='a-size-medium a-color-base a-text-normal']")
     public List <WebElement> resultsAfterFilter;
+
+    //Basket
+
+    @FindBy (id = "add-to-cart-button")
+    public  WebElement addToCartButton;
+
+    @FindBy(xpath = "//span[@id='nav-cart-count']")
+    public WebElement cartItemCount;
+
+    @FindBy(xpath = "//span[@class='a-size-medium a-color-base sc-price sc-white-space-nowrap sc-product-price a-text-bold']")
+    public List <WebElement> itemCountPriceList;
+
+    @FindBy(xpath = "//a[@id='nav-cart']")
+    public WebElement cartIcon;
+
+    @FindBy(xpath = "(//span[@class='a-size-medium a-color-base sc-price sc-white-space-nowrap'])[2]")
+    public WebElement subTotalText;
 }
 
 
