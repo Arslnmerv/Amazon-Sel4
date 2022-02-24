@@ -119,10 +119,20 @@ public class HomePage {
     @FindBy (name = "submit.save")
     public WebElement yesButton;
 
-//    @FindBy (xpath ="//span[text()='Create a List']")
-//    public WebElement createAList;
+    @FindBy (xpath ="(//a[@class='a-link-normal'])[10]")
+    public WebElement addIdeaToList;
 
+    @FindBy (xpath ="//input[@id='wfa-note-add-button']")
+    public WebElement addToList;
 
+    @FindBy (id = "wfaTextInput")
+    public WebElement saveAnIdea;
+
+    @FindBy (xpath = "(//input[@name='submit.deleteItem'])[1]")
+    public WebElement deleteButton;
+
+    @FindBy (xpath ="(//div[@class='a-alert-content'])[12]")
+    public WebElement deletedAlert;
 
 }
 

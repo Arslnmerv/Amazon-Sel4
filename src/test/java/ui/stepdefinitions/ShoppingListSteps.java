@@ -2,6 +2,7 @@ package ui.stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import ui.pages.HomePage;
+import ui.utilities.ConfigReader;
 import ui.utilities.ReusableMethods;
 import static org.junit.Assert.*;
 
@@ -31,6 +32,7 @@ public class ShoppingListSteps {
         assertTrue(homePage.shoppingListHeader.isDisplayed());
 
     }
+
     @Then("Clicks more on the right of the Shopping List page, and then click manage list.")
     public void clicks_more_on_the_right_of_the_shopping_list_page_and_then_click_manage_list() {
 
@@ -39,6 +41,7 @@ public class ShoppingListSteps {
         homePage.manageList.click();
 
     }
+
     @Then("Clicks on Delete list and confirm and perform the delete operation.")
     public void clicks_on_delete_list_and_confirm_and_perform_the_delete_operation() {
 
@@ -49,4 +52,22 @@ public class ShoppingListSteps {
 
     }
 
+    @Then("Records the desired data in the boxes under the Shopping List title.")
+    public void recordsTheDesiredDataInTheBoxesUnderTheShoppingListTitle() {
+
+        ReusableMethods.waitFor(10);
+        homePage.addIdeaToList.click();
+        homePage.saveAnIdea.sendKeys(ConfigReader.getProperty("itemToSave"));
+        homePage.addToList.click();
+
+    }
+
+    @Then("Clicks on the Delete item deletes the desired data.")
+    public void clicksOnTheDeleteItemDeletesTheDesiredData() {
+
+        homePage.deleteButton.click();
+        ReusableMethods.waitFor(10);
+        assertTrue(homePage.deletedAlert.isDisplayed());
+
+    }
 }
