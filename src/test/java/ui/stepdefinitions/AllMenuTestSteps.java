@@ -6,7 +6,6 @@ import java.util.Random;
 import static org.junit.Assert.assertTrue;
 
 public class AllMenuTestSteps {
-
     HomePage homePage = new HomePage();
 
     @Then("Clicks on All.")
