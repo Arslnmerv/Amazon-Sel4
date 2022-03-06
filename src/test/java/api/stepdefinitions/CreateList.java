@@ -3,7 +3,7 @@ package api.stepdefinitions;
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import ui.utilities.ConfigReader;
 import java.util.HashMap;
 import static io.restassured.RestAssured.given;
@@ -41,14 +41,14 @@ public class CreateList extends TestBaseApi {
     @Then("Assert status code is {int}")
     public void assertStatusCodeIs(int statusCode) {
 
-        Assert.assertEquals(statusCode,response.getStatusCode());
+        assertEquals(statusCode,response.getStatusCode());
 
     }
 
     @Then("Assert list name is {string}")
     public void assert_list_name_is(String listName) {
 
-        Assert.assertEquals(listName,jsonPath.getString("name"));
+        assertEquals(listName,jsonPath.getString("name"));
 
     }
 

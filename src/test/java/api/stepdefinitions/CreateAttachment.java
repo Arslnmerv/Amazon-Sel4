@@ -3,26 +3,28 @@ package api.stepdefinitions;
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import static org.junit.Assert.assertEquals;
 import ui.utilities.ConfigReader;
 import java.util.HashMap;
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
-public class CreateBoard extends TestBaseApi {
+
+public class CreateAttachment extends  TestBaseApi{
 
     Response response;
     JsonPath jsonPath;
 
-    @Given("Send POST request for create {string} board")
-    public void send_post_request_for_create_board(String boardName) {
+    @Given("Send POST request for create {string} attachment")
+public void sendPOSTRequestForCreateAttachment(String attachmentName) {
 
         setUp();
-        spec.pathParams("first",1,"second","boards");
+        spec.pathParams("first",1,"second","cards","third", ConfigReader.getProperty("idCard"),"fourth","attachments");
 
         HashMap<String,String> requestBody=new HashMap<>();
-        requestBody.put("name",boardName);
+        requestBody.put("name",attachmentName);
         requestBody.put("key", ConfigReader.getProperty("key"));
         requestBody.put("token",ConfigReader.getProperty("token"));
+        requestBody.put("url", ConfigReader.getProperty("urlForAttachment"));
 
         System.out.println(requestBody);
 
@@ -31,25 +33,25 @@ public class CreateBoard extends TestBaseApi {
                 contentType("application/json").
                 body(requestBody).
                 when().
-                post("/{first}/{second}");
+                post("/{first}/{second}/{third}/{fourth}");
 
         response.prettyPrint();
         jsonPath=response.jsonPath();
 
-    }
+}
 
-    @Then("Assert status code {int}")
-    public void assertStatusCode(int statusCode) {
+    @Then("Assert for create attachment status code is {int}")
+    public void assertForCreateAttachmentStatusCodeIs(int statusCode) {
 
         assertEquals(statusCode,response.getStatusCode());
 
     }
 
-    @Then("Assert board name is {string}")
-    public void assert_board_name_is(String boardName) {
+    @And("Assert attachment name is {string}")
+    public void assertAttachmentNameIs(String attachmentName) {
 
-        assertEquals(boardName,jsonPath.getString("name"));
+        assertEquals(attachmentName,jsonPath.getString("name"));
+
 
     }
-
 }

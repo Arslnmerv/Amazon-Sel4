@@ -3,28 +3,27 @@ package api.stepdefinitions;
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import static org.junit.Assert.assertEquals;
 import ui.utilities.ConfigReader;
 import java.util.HashMap;
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
-public class CreateBoard extends TestBaseApi {
+public class CreateCard extends TestBaseApi{
 
     Response response;
     JsonPath jsonPath;
 
-    @Given("Send POST request for create {string} board")
-    public void send_post_request_for_create_board(String boardName) {
+    @Given("Send POST request for create {string} card")
+    public void sendPOSTRequestForCreateCard(String cardName) {
 
         setUp();
-        spec.pathParams("first",1,"second","boards");
+        spec.pathParams("first",1,"second","cards");
 
         HashMap<String,String> requestBody=new HashMap<>();
-        requestBody.put("name",boardName);
+        requestBody.put("name",cardName);
         requestBody.put("key", ConfigReader.getProperty("key"));
         requestBody.put("token",ConfigReader.getProperty("token"));
-
-        System.out.println(requestBody);
+        requestBody.put("idList" , ConfigReader.getProperty("idList"));
 
         response =given().
                 spec(spec).
@@ -38,17 +37,17 @@ public class CreateBoard extends TestBaseApi {
 
     }
 
-    @Then("Assert status code {int}")
-    public void assertStatusCode(int statusCode) {
+    @Then("Assert for create card status code is {int}")
+    public void assertForCreateCardStatusCodeIs(int statusCode) {
 
         assertEquals(statusCode,response.getStatusCode());
 
     }
 
-    @Then("Assert board name is {string}")
-    public void assert_board_name_is(String boardName) {
+    @And("Assert card name is {string}")
+    public void assertCardNameIs(String cardName) {
 
-        assertEquals(boardName,jsonPath.getString("name"));
+        assertEquals(cardName , jsonPath.getString("name"));
 
     }
 
