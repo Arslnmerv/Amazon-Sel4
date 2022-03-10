@@ -1,39 +1,69 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-02-20T11:27:15.403Z",
-        "line": 3,
-        "name": "deneme1",
+        "start_timestamp": "2022-03-10T19:42:07.018Z",
+        "line": 4,
+        "name": "Create_attachment",
         "description": "",
-        "id": "deneme;deneme1",
+        "id": "trello-testi;create-attachment",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3419944500,
+              "duration": 4741227700,
               "status": "passed"
             },
-            "line": 4,
-            "name": "user send a GET request",
+            "line": 5,
+            "name": "Send POST request for create \"deneme\" attachment",
             "match": {
-              "location": "api.stepdefinitions.MyStepdefs.userSendAGETRequest()"
+              "arguments": [
+                {
+                  "val": "\"deneme\"",
+                  "offset": 29
+                }
+              ],
+              "location": "api.stepdefinitions.CreateAttachment.sendPOSTRequestForCreateAttachment(java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 96318700,
+              "duration": 4998200,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user get a response",
+            "line": 6,
+            "name": "Assert for create attachment status code is 200",
             "match": {
-              "location": "api.stepdefinitions.MyStepdefs.userGetAResponse()"
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "api.stepdefinitions.CreateAttachment.assertForCreateAttachmentStatusCodeIs(int)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1206459400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Assert attachment name is \"deneme\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deneme\"",
+                  "offset": 26
+                }
+              ],
+              "location": "api.stepdefinitions.CreateAttachment.assertAttachmentNameIs(java.lang.String)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
@@ -43,11 +73,20 @@
         ]
       }
     ],
-    "name": "deneme",
+    "name": "Trello_testi",
     "description": "",
-    "id": "deneme",
+    "id": "trello-testi",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/apiFeature/api.feature",
-    "tags": []
+    "uri": "file:src/test/resources/apiFeature/createAttachment.feature",
+    "tags": [
+      {
+        "name": "@api",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

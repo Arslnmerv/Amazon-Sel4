@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.079"/>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="6.427">
+    <testcase classname="Trello_testi" name="Create_attachment" time="5.958">
+        <system-out>
+            <![CDATA[Given Send POST request for create "sunumozel" attachment...................passed
+Then Assert for create attachment status code is 200........................passed
+And Assert attachment name is "sunumozel"...................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

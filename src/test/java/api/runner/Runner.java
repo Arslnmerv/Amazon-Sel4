@@ -6,9 +6,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty", "html:Reports/htmlReport.html",
-                "json:Reports/jsonReport.json"},
-        features="src/test/resources/apiFeature/createBoard.feature",
+        plugin = {"html:target\\cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"},
+        features="src/test/resources/apiFeature",
         glue="api/stepdefinitions",
         dryRun=false,
         tags="@api",

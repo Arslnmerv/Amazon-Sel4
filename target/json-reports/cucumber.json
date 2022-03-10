@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-03-10T20:31:18.292Z",
+        "line": 4,
+        "name": "Create_attachment",
+        "description": "",
+        "id": "trello-testi;create-attachment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4618523900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Send POST request for create \"sunumozel\" attachment",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sunumozel\"",
+                  "offset": 29
+                }
+              ],
+              "location": "api.stepdefinitions.CreateAttachment.sendPOSTRequestForCreateAttachment(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4998800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Assert for create attachment status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "api.stepdefinitions.CreateAttachment.assertForCreateAttachmentStatusCodeIs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1205767500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Assert attachment name is \"sunumozel\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sunumozel\"",
+                  "offset": 26
+                }
+              ],
+              "location": "api.stepdefinitions.CreateAttachment.assertAttachmentNameIs(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api"
+          }
+        ]
+      }
+    ],
+    "name": "Trello_testi",
+    "description": "",
+    "id": "trello-testi",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/apiFeature/createAttachment.feature",
+    "tags": [
+      {
+        "name": "@api",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
