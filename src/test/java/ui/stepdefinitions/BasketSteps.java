@@ -2,7 +2,6 @@ package ui.stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import ui.pages.HomePage;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +41,6 @@ public class BasketSteps {
         for (int i = 0; i < count; i++) {
             String str1 = priceList.get(i).replace("$", "");
             lastPriceList.add(str1);
-            System.out.println("+");
         }
 
         double toplam = 0;

@@ -17,6 +17,7 @@ public class LinksInFooterSteps {
             assertTrue(homePage.headersInFooter.get(i).isDisplayed());
         }
     }
+
     @Then("Verifies that the links are active and point to the relevant page.")
     public void verifies_that_the_links_are_active_and_point_to_the_relevant_page() {
 
