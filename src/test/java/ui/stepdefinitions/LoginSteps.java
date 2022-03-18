@@ -91,6 +91,4 @@ public class LoginSteps {
          log.info("page closed");
          Log.endTestCase("Login test");
     }
-
-
 }
