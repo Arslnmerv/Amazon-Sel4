@@ -4,6 +4,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import ui.pages.HomePage;
+
 import static org.junit.Assert.assertTrue;
 
 public class ProductSearchSteps {
@@ -16,7 +17,7 @@ public class ProductSearchSteps {
 
         homePage.searchBox.sendKeys(productName + Keys.ENTER);
 
-        for (WebElement w: homePage.resultsList) {
+        for (WebElement w : homePage.resultsList) {
             assertTrue(w.getText().contains(productName));
 
         }
