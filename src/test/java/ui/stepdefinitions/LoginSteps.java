@@ -75,6 +75,7 @@ public class LoginSteps {
         homePage.passwordBox.sendKeys(ConfigReader.getProperty("invalidPassword"));
         homePage.signInButton.click();
         log.info("Unable to login with invalid password");
+
     }
 
     @And("User cannot login successfully.")

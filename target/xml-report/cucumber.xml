@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="5.767">
-    <testcase classname="Trello_testi" name="Create_attachment" time="5.409">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="22.066">
+    <testcase classname="US_01 User must be able to access Amazon.com page" name="US_02_TC_001  User must be able to login with valid information (positive)" time="21.718">
         <system-out>
-            <![CDATA[Given Send POST request for create "sunumozel" attachment...................passed
-Then Assert for create attachment status code is 200........................passed
-And Assert attachment name is "sunumozel"...................................passed
+            <![CDATA[When User goes to url.......................................................passed
+Then Clicks the sign in button on the Account & Lists article...............passed
+Then Enters the valid data into the e-mail box and click the continue button..passed
+Then Enters the valid data in the password box and click the sign in button..passed
+Then The user logs in successfully..........................................passed
+And Closes the page.........................................................passed
 ]]>
         </system-out>
     </testcase>

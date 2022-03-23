@@ -4,7 +4,7 @@ Feature:  US_01 User must be able to access Amazon.com page
     When  User goes to url.
     And Closes the page
 
-
+@all
   Scenario: US_02_TC_001  User must be able to login with valid information (positive)
     When  User goes to url.
     Then  Clicks the sign in button on the Account & Lists article
