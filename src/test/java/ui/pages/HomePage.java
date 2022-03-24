@@ -134,6 +134,15 @@ public class HomePage {
     @FindBy (xpath ="(//div[@class='a-alert-content'])[12]")
     public WebElement deletedAlert;
 
+    @FindBy (xpath ="(//span[@class='a-size-medium a-color-base a-text-normal'])[1]")
+    public WebElement samsung;
+
+    @FindBy (xpath ="(//span[@class='a-truncate-cut'])[1]")
+    public WebElement samsung2;
+
+    @FindBy (xpath ="(//input[@value='Delete'])[1]")
+    public WebElement delete;
+
 }
 
 
