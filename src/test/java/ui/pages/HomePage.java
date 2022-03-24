@@ -137,6 +137,9 @@ public class HomePage {
     @FindBy (xpath ="(//span[@class='a-size-medium a-color-base a-text-normal'])[1]")
     public WebElement samsung;
 
+    @FindBy (xpath ="(//span[@class='a-price-whole'])[1]")
+    public WebElement price;
+
     @FindBy (xpath ="(//span[@class='a-truncate-cut'])[1]")
     public WebElement samsung2;
 

@@ -1,5 +1,6 @@
 Feature: Amazon task
 
+  @task1
   Scenario:
     Then  "https://www.amazon.com" sitesine gider ve anasayfanın açıldığı onaylanır,
     Then  Login ekranı açılır ve bir kullanıcı ile login olunur.(Var olan bir kullanıcı ile giriş yapılabilir.)

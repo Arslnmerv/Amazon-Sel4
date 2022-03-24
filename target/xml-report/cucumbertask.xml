@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.999">
-    <testcase classname="Amazon task" name="_2" time="27.737">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.109">
+    <testcase classname="Amazon task" name="_2" time="29.838">
         <system-out>
             <![CDATA[Then "https://www.amazon.com" sitesine gider ve anasayfanın açıldığı onaylanır,.passed
 Then Login ekranı açılır ve bir kullanıcı ile login olunur.(Var olan bir kullanıcı ile giriş yapılabilir.).passed

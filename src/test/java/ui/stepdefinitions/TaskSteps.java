@@ -1,6 +1,8 @@
 package ui.stepdefinitions;
 
 import io.cucumber.java.en.Then;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import ui.pages.HomePage;
 import ui.utilities.ConfigReader;
@@ -10,6 +12,8 @@ import static org.junit.Assert.*;
 public class TaskSteps {
 
     HomePage homePage = new HomePage();
+    Logger log = (Logger) LogManager.getLogger(TaskSteps.class);
+
     @Then("{string} sitesine gider ve anasayfanın açıldığı onaylanır,")
     public void sitesineGiderVeAnasayfanınAçıldığıOnaylanır(String url) {
 
@@ -35,7 +39,7 @@ public class TaskSteps {
     @Then("Gelen sayfada Samsung Galaxy A52 5G\\(Eğer ürün listenmezse başka bir samsung telefon seçilebilir.) ürünün var olduğu kontrol edilir ve fiyatı loglanır,")
     public void gelen_sayfada_samsung_galaxy_a52_5g_eğer_ürün_listenmezse_başka_bir_samsung_telefon_seçilebilir_ürünün_var_olduğu_kontrol_edilir_ve_fiyatı_loglanır() {
           assertTrue(homePage.samsung.isDisplayed());
-
+        log.info(homePage.price.getText());
     }
 
     @Then("Ürünün içine gidilip Add to List\\(Eğer kullanıcı önceden liste oluşturmadıysa gelen popuptan Create List butonu tıklanır.) butonu tıklanır,")
