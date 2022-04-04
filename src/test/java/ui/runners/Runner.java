@@ -9,11 +9,13 @@ import org.junit.runner.RunWith;
         plugin={"html:target\\cucumbertask-reports.html",
                 "json:target/json-reports/cucumbertask.json",
                 "junit:target/xml-report/cucumbertask.xml"},
-        features="src/test/resources/uiFeature/Task.feature",
+        features="src/test/resources/uiFeature/Login.feature",
         glue="ui/stepdefinitions",
-        tags="@task1"  ,
+        tags="@all"  ,
 
         dryRun= false
 )
+
 public class Runner {
+
 }

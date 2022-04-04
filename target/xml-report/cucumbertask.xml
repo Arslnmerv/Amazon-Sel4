@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.109">
-    <testcase classname="Amazon task" name="_2" time="29.838">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="51.457">
+    <testcase classname="US_01 User must be able to access amazon page" name="TC_001 User goes to relevant url" time="12.563">
         <system-out>
-            <![CDATA[Then "https://www.amazon.com" sitesine gider ve anasayfanın açıldığı onaylanır,.passed
-Then Login ekranı açılır ve bir kullanıcı ile login olunur.(Var olan bir kullanıcı ile giriş yapılabilir.).passed
-Then Ekranın üstündeki Search alanına "samsung" yazılır Ara butonuna tıklanır,.passed
-Then Gelen sayfada Samsung Galaxy A52 5G(Eğer ürün listenmezse başka bir samsung telefon seçilebilir.) ürünün var olduğu kontrol edilir ve fiyatı loglanır,.passed
-Then Ürünün içine gidilip Add to List(Eğer kullanıcı önceden liste oluşturmadıysa gelen popuptan Create List butonu tıklanır.) butonu tıklanır,.passed
-Then Shopping list açılır ve ürünün eklendiği kontrol edilir,...............passed
-Then Delete butonu tıklanır,................................................passed
-Then Ürünün listede olmadığı kontrol edilir.................................passed
+            <![CDATA[When User goes to url.......................................................passed
+And Closes the page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_01 User must be able to access amazon page" name="US_02_TC_001  User must be able to login with valid information (positive)" time="14.459">
+        <system-out>
+            <![CDATA[When User goes to url.......................................................passed
+Then Clicks the sign in button on the Account & Lists article...............passed
+Then Enters the valid data into the e-mail box and click the continue button..passed
+Then Enters the valid data in the password box and click the sign in button..passed
+Then The user logs in successfully..........................................passed
+And Closes the page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_01 User must be able to access amazon page" name="US_02_TC_002 User mustn't be able to login with invalid information (negative)" time="11.107">
+        <system-out>
+            <![CDATA[When User goes to url.......................................................passed
+Then Clicks the sign in button on the Account & Lists article...............passed
+Then Enters the invalid data into the e-mail box and clicks the continue button..passed
+Then Sees There was a problem...............................................passed
+And Closes the page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_01 User must be able to access amazon page" name="US_02_TC_002/2 User mustn't be able to login with invalid information (negative2)" time="12.732">
+        <system-out>
+            <![CDATA[When User goes to url.......................................................passed
+Then Clicks the sign in button on the Account & Lists article...............passed
+Then Enters the valid data into the e-mail box and click the continue button..passed
+Then Enters the invalid data in the password box and clicks the sign in button..passed
+Then User cannot login successfully.........................................passed
+And Closes the page.........................................................passed
 ]]>
         </system-out>
     </testcase>
